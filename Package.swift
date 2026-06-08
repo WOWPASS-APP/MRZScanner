@@ -13,7 +13,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/appintheair/MRZParser.git", .upToNextMajor(from: "1.1.2"))
+        // Patched fork: Gregorian-calendar fix for MRZ date century inference (see MRZFieldFormatter).
+        .package(url: "https://github.com/WOWPASS-APP/MRZParser.git", .revision("09791f10122e840fc05d89ed8b5596425c58985f"))
     ],
     targets: [
         .target(
